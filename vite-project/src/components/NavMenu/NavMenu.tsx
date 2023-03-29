@@ -10,11 +10,12 @@ interface HeaderProps {
 
 export const NavMenu: React.FC = () => {
   const menuItems: HeaderProps[] = [
-    { link: '/portfolio', title: 'Portfolio' },
-    { link: '/about-me', title: 'About me' },
     { link: '/entry-form', title: 'Entry Form' },
+    { link: '/entries', title: 'Entries' },
+    { link: '/portfolio', title: 'Portfolio' },
     { link: '/registration-form', title: 'Reg Form' },
     { link: '/', title: 'Home' },
+    { link: '/about-me', title: 'About me' },
   ];
 
   return (

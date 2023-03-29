@@ -1,4 +1,4 @@
-import { FORM_LABELS, PLACE_HOLDER } from '../../constants';
+import { FORM_LABELS, PLACE_HOLDER, VALIDATION_MESSAGES } from '../../constants';
 import { InputTypes } from '../../components/Input/Input';
 
 enum RegistrationFormNameEnum {
@@ -25,7 +25,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         type: InputTypes.text,
         name: RegistrationFormNameEnum.firstName,
         placeholder: PLACE_HOLDER.ENTER_NAME,
-        errorMessages: 'This field is required',
+        errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
         required: true,
     },
     {
@@ -33,7 +33,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         type: InputTypes.text,
         name: RegistrationFormNameEnum.lastName,
         placeholder: PLACE_HOLDER.ENTER_LAST_NAME,
-        errorMessages: 'This field is required',
+        errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
         required: true,
     },
     {
@@ -41,7 +41,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         type: InputTypes.email,
         name: RegistrationFormNameEnum.email,
         placeholder: PLACE_HOLDER.ENTER_EMAIL,
-        errorMessages: 'This field is required',
+        errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
         required: true,
     },
     {
@@ -49,7 +49,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         type: InputTypes.tel,
         name: RegistrationFormNameEnum.phoneNumber,
         placeholder: PLACE_HOLDER.ENTER_PHONE_NUMBER,
-        errorMessages: 'This field is required',
+        errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
         required: true,
     },
     {
@@ -57,7 +57,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         type: InputTypes.password,
         name: RegistrationFormNameEnum.password,
         placeholder: PLACE_HOLDER.PASSWORD,
-        errorMessages: 'This field is required',
+        errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
         required: true,
     },
     {
@@ -65,7 +65,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         type: InputTypes.password,
         name: RegistrationFormNameEnum.repeatPassword,
         placeholder: PLACE_HOLDER.REPEAT_PASSWORD,
-        errorMessages: 'This field is required',
+        errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
         required: true,
     },
 ];

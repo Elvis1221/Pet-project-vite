@@ -1,5 +1,4 @@
 import React, { FC, useState } from 'react';
-
 // import { ReactComponent as ShowPassword } from './icons/showPassword.svg';
 // import { ReactComponent as HiddenPassword } from './icons/hidenPassword.svg';
 
@@ -62,10 +61,13 @@ const Input: FC<IFormFieldsArr> = ({
       {isShowPassword && (
         <i className={css.cross} onClick={togglePasswordVisibility}>
           {passwordShown ? (
-            <span>+</span>
-          ) : (
+            // <span>+</span>
             // <ShowPassword className={css.eyeIcon} />
-            <span>-</span>
+            <img className={css.eyeIcon} alt={'./icons/hidenPassword.svg'} />
+          ) : (
+            <img className={css.eyeIcon} alt={'./icons/hidenPassword.svg'} />
+
+            // <span>-</span>
             // <HiddenPassword className={css.eyeIcon} />
           )}
         </i>

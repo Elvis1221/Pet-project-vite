@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import PageWrapper from '../../components/PageWrapper/PageWrapper';
+import Modal from '../../components/Modal/Modal';
 import Input, { InputTypes } from '../../components/Input/Input';
 import Button, { ButtonsThemes, ButtonsType } from '../../components/Button/Buttons';
+
 import { BUTTONS_TITLE, KEYS, FORM_LABELS, PLACE_HOLDER, PAGE_TITLES } from '../../constants';
-import Modal from '../../components/Modal/Modal';
 
 import css from './EntryForm.module.css';
 
@@ -34,6 +36,12 @@ export const EntryForm: React.FC = () => {
     phoneNumber: '',
     dateAttendance: new Date(),
   });
+
+  const navigate = useNavigate();
+
+  const navigateHome = () => {
+    navigate('/');
+  };
 
   const entryFormFieldsArr: IFormFieldsArr[] = [
     {
@@ -78,11 +86,15 @@ export const EntryForm: React.FC = () => {
     },
   ];
 
-  const isCloseModal = () => setIsDisplayModal(false);
+  const isCloseModal = () => {
+    setIsDisplayModal(false);
+    navigateHome();
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(JSON.stringify(formData));
+    console.log(JSON.stringify(formData));
+    setIsDisplayModal(true);
   };
 
   return (
@@ -109,8 +121,8 @@ export const EntryForm: React.FC = () => {
             children={
               <div className={css.ModalWrapper}>
                 <span>Your details have been sent to.</span>
-                <Button className={css.ModalButton} onClick={() => setIsDisplayModal(false)}>
-                  Close
+                <Button className={css.ModalButton} onClick={isCloseModal}>
+                  {BUTTONS_TITLE.CLOSE}
                 </Button>
               </div>
             }
@@ -121,7 +133,6 @@ export const EntryForm: React.FC = () => {
           type={ButtonsType.submit}
           children={BUTTONS_TITLE.SUBMIT}
           className={css.Button}
-          onClick={() => setIsDisplayModal(true)}
           disabled={!formData.phoneNumber}
         />
       </form>
