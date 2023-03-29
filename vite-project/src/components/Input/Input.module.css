@@ -1,0 +1,68 @@
+.FormInput {
+    width: 18.75vw;
+    height: 2.7vw;
+    margin: 0.1vw 0 0.4vw 0;
+    border: 1px solid #ccdbec;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: var(--gray);
+    outline: none;
+    padding: 1rem;
+    font-family: var(--font-family-roboto);
+    font-size: 1vw;
+    line-height: 1.1vw;
+}
+
+.FormInput[type='text'],
+.FormInput[type='email'],
+.FormInput[type='tel'],
+.FormInput[type='password'] {
+    padding-left: 0.781vw;
+}
+
+.FormInput:required:valid {
+    border-color: green;
+}
+
+.FormInput:hover {
+    border-color: var(--blue-opacity);
+
+}
+
+.InputWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cross,
+.eyeIcon {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.eyeIcon {
+    position: absolute;
+    height: 0.93vw;
+    width: 1.25vw;
+    left: 0;
+    right: 0;
+    top: 0.05vw;
+    bottom: 0.05vw;
+}
+
+.cross {
+    right: 2vw;
+}
+
+.crossIcon {
+    display: inline-block;
+    fill: grey;
+    line-height: 1;
+    stroke: transparent;
+    stroke-width: 0;
+}

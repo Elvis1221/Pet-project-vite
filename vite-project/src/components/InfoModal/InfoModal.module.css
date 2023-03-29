@@ -1,0 +1,96 @@
+.WrapperModalItems {
+  display: block;
+  max-width: 25vw;
+  padding: 30px 40px;
+  margin: 0 auto;
+}
+
+.WrapperHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+
+.InfoSVG {
+  width: 1.3vw;
+  height: 1.3vw;
+}
+
+.Cross {
+  width: 1vw;
+  height: 1vw;
+  cursor: pointer;
+}
+
+.InformTextModal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5vw;
+  align-items: center;
+  font-size: var(--font-size-m);
+}
+
+@media only screen and (max-width: 1024px) {
+  .WrapperModalItems {
+    max-width: 50vw;
+  }
+
+  .WrapperHeader {
+    margin-bottom: 2vw;
+  }
+
+  .InfoSVG {
+    width: 2.3vw;
+    height: 2.3vw;
+  }
+
+  .Cross {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .WrapperModalItems {
+    max-width: 60vw;
+  }
+
+  .WrapperHeader {
+    margin-bottom: 2.6vw;
+  }
+
+  .InfoSVG {
+    width: 2.9vw;
+    height: 2.9vw;
+  }
+
+  .Cross {
+    width: 2.3vw;
+    height: 2.3vw;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .WrapperModalItems {
+    max-width: 90vw;
+  }
+
+  .WrapperHeader {
+    margin-bottom: 5.6vw;
+  }
+
+  .InfoSVG {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .Cross {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .InformTextModal {
+    font-size: var(--font-size-s);
+  }
+}

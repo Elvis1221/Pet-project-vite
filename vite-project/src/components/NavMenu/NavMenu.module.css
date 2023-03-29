@@ -1,0 +1,42 @@
+.NavMenuWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.NavMenuContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 3vh 3vh 5vh 0 ;
+}
+
+.Link {
+  width: 15vh;
+  min-width: 11vh;
+  margin-left: 10px;
+  border: 1px solid deepskyblue;
+  padding: 0.7vh;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--blue);
+  font-family: var(--font-family-roboto);
+  font-size: 0.9vw;
+  line-height: 1.3vw;
+  height: inherit;
+}
+
+.ModalButton {
+  width: 15vh;
+  min-width: 11vh;
+  margin-left: 10px;
+  border: 1px solid deepskyblue;
+  padding: 0.7vh;
+  border-radius: 5px;
+}
+
+.Link:hover, .ModalButton:hover  {
+  background: deepskyblue;
+  color: var(--white);
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}

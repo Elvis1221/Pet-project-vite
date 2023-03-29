@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@100;300;400;700;900&display=swap');
+
+:root {
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-notosans: 'Noto Sans', sans-serif;
+
+  --font-weight-black: 900;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 13px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 18px;
+  --font-size-xl: 22px;
+  --font-size-big: 190px;
+}

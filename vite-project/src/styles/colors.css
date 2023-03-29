@@ -1,0 +1,14 @@
+:root {
+  --blue: deepskyblue;
+  --blue-opacity: rgba(75, 155, 250, 0.7);
+  --grey-opacity: rgba(75, 81, 104, 0.7);
+  --gray: rgba(75, 81, 104, 1);
+
+  --shadow-primary: rgba(60, 74, 97, 0.4);
+  --secondary-dark: rgb(66, 84, 118);
+
+  --white: #ffffff;
+  --red: red;
+
+  --disable: #a8b5beff;
+}

@@ -1,0 +1,71 @@
+.FormWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  margin: 0 auto;
+  align-items: center;
+  padding: 1.5vw;
+}
+
+.InputWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Input {
+  padding-left: 1vw;
+  width: 20vw;
+  height: 2.5vw;
+  /*margin: 0.1vw 0 0.4vw 0;*/
+  border: 1px solid #ccdbec;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: var(--gray);
+  outline: none;
+  font-family: var(--font-family-roboto);
+}
+
+.Input:required:valid {
+  border-color: green;
+}
+
+.Input:hover {
+  border-color: var(--blue-opacity);
+
+}
+
+.InputWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Button {
+  margin-top: 2vw;
+}
+
+.ErrorMessage {
+  color: var(--red);
+  font-size: var(--font-size-xxs);
+}
+
+.HiddenBlock {
+  font-size: var(--font-size-xxs);
+  visibility: hidden;
+}
+
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0.1vw 0 0.4vw 0;
+  height: 3.5vw;
+}
+
+.Label {
+  color: var(--blue);
+  font-size: 18px;
+}
