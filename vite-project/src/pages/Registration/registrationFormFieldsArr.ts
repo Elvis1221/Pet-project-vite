@@ -1,4 +1,4 @@
-import { FORM_LABELS, PLACE_HOLDER, VALIDATION_MESSAGES } from '../../constants';
+import { FORM_LABELS, PATTERNS, PLACE_HOLDER, VALIDATION_MESSAGES } from '../../constants';
 import { InputTypes } from '../../components/Input/Input';
 
 enum RegistrationFormNameEnum {
@@ -10,6 +10,15 @@ enum RegistrationFormNameEnum {
     repeatPassword = 'repeatPassword',
 }
 
+export type RegistrationFormValues = {
+    [RegistrationFormNameEnum.email]: string;
+    [RegistrationFormNameEnum.firstName]: string;
+    [RegistrationFormNameEnum.lastName]: string;
+    [RegistrationFormNameEnum.phoneNumber]: string;
+    [RegistrationFormNameEnum.password]: string;
+    [RegistrationFormNameEnum.repeatPassword]: string;
+};
+
 export type EntreFormField = {
     label: string;
     name: RegistrationFormNameEnum;
@@ -17,6 +26,7 @@ export type EntreFormField = {
     errorMessages: string;
     required?: boolean;
     placeholder?: string;
+    pattern?: any;
 };
 
 export const registrationFormFieldsArr: EntreFormField[] = [
@@ -42,6 +52,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         name: RegistrationFormNameEnum.email,
         placeholder: PLACE_HOLDER.ENTER_EMAIL,
         errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
+        // pattern: PATTERNS.EMAIL,
         required: true,
     },
     {
@@ -50,6 +61,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         name: RegistrationFormNameEnum.phoneNumber,
         placeholder: PLACE_HOLDER.ENTER_PHONE_NUMBER,
         errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
+        // pattern: PATTERNS.PHONE_NUMBER,
         required: true,
     },
     {
@@ -58,6 +70,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         name: RegistrationFormNameEnum.password,
         placeholder: PLACE_HOLDER.PASSWORD,
         errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
+        // pattern: PATTERNS.PASSWORD,
         required: true,
     },
     {
@@ -66,6 +79,7 @@ export const registrationFormFieldsArr: EntreFormField[] = [
         name: RegistrationFormNameEnum.repeatPassword,
         placeholder: PLACE_HOLDER.REPEAT_PASSWORD,
         errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
+        // pattern: PATTERNS.PASSWORD,
         required: true,
     },
 ];

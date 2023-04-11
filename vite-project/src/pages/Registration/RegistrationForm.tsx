@@ -5,19 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import PageWrapper from '../../components/PageWrapper/PageWrapper';
 import Button, { ButtonsType } from '../../components/Button/Buttons';
 
-import { EntreFormField, registrationFormFieldsArr } from './registrationFormFieldsArr';
-import { BUTTONS_TITLE, PAGE_TITLES } from '../../constants';
+import {
+  EntreFormField,
+  registrationFormFieldsArr,
+  RegistrationFormValues,
+} from './registrationFormFieldsArr';
+import { BUTTONS_TITLE, PAGE_TITLES, PATTERNS } from '../../constants';
 
 import css from './RegistrationForm.module.css';
-
-type RegistrationFormValues = {
-  email: string;
-  firstName: string;
-  lastName: string;
-  phoneNumber: string;
-  password: string;
-  repeatPassword: string;
-};
 
 const RegistrationForm: React.FC = () => {
   const navigate = useNavigate();
@@ -48,6 +43,7 @@ const RegistrationForm: React.FC = () => {
                 placeholder={item.placeholder}
                 className={css.Input}
                 {...register(item.name, { required: item.required })}
+                pattern={item.pattern}
               />
               {errors[item.name] && <span className={css.ErrorMessage}>{item.errorMessages}</span>}
             </div>

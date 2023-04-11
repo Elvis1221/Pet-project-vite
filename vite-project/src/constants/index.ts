@@ -2,6 +2,12 @@ import uuid from 'react-uuid';
 
 export const randomUuid = uuid();
 
+export const PATTERNS = {
+    PASSWORD: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
+    EMAIL: /[a-z0-9]+@[a-z0-9.-]+.[a-z]{2,}$/,
+    PHONE_NUMBER: /^(\+48\s)?\d{9}$/,
+};
+
 export const KEYS = {
     FIRST_NAME: 'firstName',
     LAST_NAME: 'lastName',

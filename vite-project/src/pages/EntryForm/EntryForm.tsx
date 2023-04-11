@@ -114,6 +114,13 @@ export const EntryForm: React.FC = () => {
             required
           />
         ))}
+        <Input
+          value={formData.firstName}
+          id={KEYS.FIRST_NAME}
+          htmlFor={'1'}
+          label={KEYS.FIRST_NAME}
+          type={InputTypes.password}
+        />
         {isDisplayModal ? (
           <Modal
             display={isDisplayModal}
