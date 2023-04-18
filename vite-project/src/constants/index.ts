@@ -19,8 +19,10 @@ export const KEYS = {
 export const FORM_LABELS = {
     FIRST_NAME: 'First Name:',
     LAST_NAME: 'Last Name:',
+    GENDER: 'Gender:',
     EMAIL: 'Email:',
     PHONE_NUMBER: 'Phone number:',
+    UPLOAD_FORM: 'Upload photo:',
     DATA_ATTENDANCE: 'Data attendance:',
     PASSWORD: 'Password:',
     REPEAT_PASSWORD: 'Repeat password:',
@@ -35,6 +37,8 @@ export const BUTTONS_TITLE = {
 export const PLACE_HOLDER = {
     ENTER_NAME: 'Enter name',
     ENTER_LAST_NAME: 'Enter last name',
+    CHOSE_GENDER: 'Chose gender...',
+    UPLOAD_PHOTO: 'Upload you photo',
     ENTER_SURNAME: 'Enter surname',
     ENTER_EMAIL: 'Enter email',
     ENTER_PHONE_NUMBER: 'Enter phone number',
@@ -44,7 +48,7 @@ export const PLACE_HOLDER = {
 };
 
 export const PAGE_TITLES = {
-    PORTFOLIO: 'Portfolio',
+    POSTS: 'Posts',
     ENTRY_FORM: 'Entry Form',
     ENTRIES: 'Entries',
     ABOUT_ME: 'About Me',

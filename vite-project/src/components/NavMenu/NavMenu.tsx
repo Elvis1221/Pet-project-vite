@@ -12,7 +12,7 @@ export const NavMenu: React.FC = () => {
   const menuItems: HeaderProps[] = [
     { link: '/entry-form', title: 'Entry Form' },
     { link: '/entries', title: 'Entries' },
-    { link: '/portfolio', title: 'Portfolio' },
+    { link: '/posts', title: 'Posts' },
     { link: '/registration-form', title: 'Reg Form' },
     { link: '/', title: 'Home' },
     { link: '/about-me', title: 'About me' },

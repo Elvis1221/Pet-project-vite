@@ -1,0 +1,44 @@
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.FormWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  /*margin: 0 auto;*/
+    border-right: 1px solid black;
+  align-items: center;
+  padding: 1.5vw;
+}
+
+.Button {
+    margin-top: 2vw;
+    width: 7vw;
+}
+
+.WrapperPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.Post{
+    width: 15vw;
+    height: 15vw;
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    margin: 1vw;
+}
+
+.PostWrapper {
+    width: 60%;
+    border-left: 1px solid black ;
+    display: flex;
+    flex-direction: row;
+}
+
+.NoPost {
+    margin: 0 auto;
+}

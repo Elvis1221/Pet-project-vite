@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 
-import { ReactComponent as ShowPassword } from './icons/showPassword.svg';
-import { ReactComponent as HiddenPassword } from './icons/hidenPassword.svg';
+// import { ReactComponent as ShowPassword } from './icons/showPassword.svg';
+// import { ReactComponent as HiddenPassword } from './icons/hidenPassword.svg';
 
 import classnames from 'classnames';
 import css from './Input.module.css';
@@ -22,6 +22,7 @@ export enum InputTypes {
   text = 'text',
   password = 'password',
   tel = 'tel',
+  file = 'file',
   date = 'date',
   email = 'email',
 }
@@ -38,12 +39,12 @@ const Input: FC<IFormFieldsArr> = ({
 }: IFormFieldsArr) => {
   const [passwordShown, setPasswordShown] = useState(false);
 
-  const togglePasswordVisibility = () => {
-    setPasswordShown(!passwordShown);
-  };
+  // const togglePasswordVisibility = () => {
+  //   setPasswordShown(!passwordShown);
+  // };
 
   const isPasswordType = passwordShown ? InputTypes.text : InputTypes.password;
-  const isShowPassword = type === InputTypes.password;
+  // const isShowPassword = type === InputTypes.password;
 
   const classNames = classnames(css.FormInput, className);
 
@@ -59,20 +60,20 @@ const Input: FC<IFormFieldsArr> = ({
         placeholder={placeholder}
         required
       />
-      {isShowPassword && (
-        <i className={css.cross} onClick={togglePasswordVisibility}>
-          {passwordShown ? (
-            // <span>+</span>
-            <ShowPassword />
-          ) : (
-            // <img className={css.eyeIcon} alt={'./icons/hidenPassword.svg'} />
-            // <img className={css.eyeIcon} alt={'./icons/hidenPassword.svg'} />
+      {/*{isShowPassword && (*/}
+      {/*  <i className={css.cross} onClick={togglePasswordVisibility}>*/}
+      {/*    {passwordShown ? (*/}
+      {/*      // <span>+</span>*/}
+      {/*      <ShowPassword />*/}
+      {/*    ) : (*/}
+      {/*      // <img className={css.eyeIcon} alt={'./icons/hidenPassword.svg'} />*/}
+      {/*      // <img className={css.eyeIcon} alt={'./icons/hidenPassword.svg'} />*/}
 
-            // <span>-</span>
-            <HiddenPassword />
-          )}
-        </i>
-      )}
+      {/*      // <span>-</span>*/}
+      {/*      <HiddenPassword />*/}
+      {/*    )}*/}
+      {/*  </i>*/}
+      {/*)}*/}
     </div>
   );
 };
