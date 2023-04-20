@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-
 import css from './FormInput.module.css';
 import classnames from 'classnames';
 
@@ -39,23 +38,21 @@ export enum FieldTypes {
   checkbox = 'checkbox',
 }
 
-const FormInput: FC<IInputFormFields> = ({ data, errors, register, className, onChange }) => {
+const FormInput: FC<IInputFormFields> = ({ data, errors, register, className }) => {
   const inputClassNames = classnames(css.Input, className);
   const selectClassNames = classnames(css.Input, className);
 
   return (
     <>
-      {data.map((item: IItem, index: number) => (
-        <div className={css.InputWrapper}>
+      {data.map((item: IItem) => (
+        <div className={css.InputWrapper} key={item.id}>
           <label className={css.Label}>{item.label}</label>
           <div className={css.InputContainer}>
             {item.fieldType === FieldTypes.input && (
               <input
-                key={index}
                 id={item.id}
                 type={item.type}
                 placeholder={item.placeholder}
-                onChange={onChange}
                 className={inputClassNames}
                 {...register(item.name, { required: item.required })}
                 pattern={item.pattern}
@@ -63,7 +60,6 @@ const FormInput: FC<IInputFormFields> = ({ data, errors, register, className, on
             )}
             {item.fieldType === FieldTypes.select && (
               <select
-                key={index}
                 type={item.type}
                 id={item.id}
                 placeholder={item.placeholder}
@@ -71,14 +67,13 @@ const FormInput: FC<IInputFormFields> = ({ data, errors, register, className, on
                 {...register(item.name, { required: item.required })}
               >
                 {item.options?.map((optionsItem: { value: string }) => (
-                  <option>{optionsItem.value}</option>
+                  <option key={optionsItem.value}>{optionsItem.value}</option>
                 ))}
               </select>
             )}
             {errors[item.name] && <span className={css.ErrorMessage}>{item.errorMessages}</span>}
           </div>
         </div>
-        // </div>
       ))}
     </>
   );

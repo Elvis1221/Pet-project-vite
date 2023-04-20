@@ -1,21 +1,29 @@
-import { FORM_LABELS, PLACE_HOLDER, randomUuid, VALIDATION_MESSAGES } from '../../constants';
+import { FORM_LABELS, PLACE_HOLDER, VALIDATION_MESSAGES } from '../../constants';
 import { FieldTypes, InputTypes } from '../../components/FormInput/FormInput';
+import uuid from 'react-uuid';
 
 enum PostFormNameEnum {
+    id = 'ID',
     firstName = 'firstName',
     lastName = 'lastName',
     gender = 'gender',
     phoneNumber = 'phoneNumber',
-    photo = 'photo',
+    fileURL = 'fileURL',
 }
 
 export type PostFormValues = {
+    [PostFormNameEnum.id]: string;
     [PostFormNameEnum.firstName]: string;
     [PostFormNameEnum.lastName]: string;
     [PostFormNameEnum.gender]: string;
     [PostFormNameEnum.phoneNumber]: string;
-    [PostFormNameEnum.photo]: FileList;
+    [PostFormNameEnum.fileURL]: string;
 };
+
+export type PostFormValuesWithFile = Omit<
+    PostFormValues,
+    keyof { [PostFormNameEnum.fileURL]: string }
+> & { [PostFormNameEnum.fileURL]: FileList };
 
 export type PostFormFields = {
     id: string;
@@ -32,7 +40,7 @@ export type PostFormFields = {
 
 export const postFormFieldsArr: PostFormFields[] = [
     {
-        id: randomUuid,
+        id: uuid(),
         label: FORM_LABELS.FIRST_NAME,
         type: InputTypes.text,
         name: PostFormNameEnum.firstName,
@@ -42,7 +50,7 @@ export const postFormFieldsArr: PostFormFields[] = [
         fieldType: FieldTypes.input,
     },
     {
-        id: randomUuid,
+        id: uuid(),
         label: FORM_LABELS.LAST_NAME,
         type: InputTypes.text,
         name: PostFormNameEnum.lastName,
@@ -52,7 +60,7 @@ export const postFormFieldsArr: PostFormFields[] = [
         fieldType: FieldTypes.input,
     },
     {
-        id: randomUuid,
+        id: uuid(),
         label: FORM_LABELS.GENDER,
         type: FieldTypes.select,
         name: PostFormNameEnum.gender,
@@ -63,24 +71,23 @@ export const postFormFieldsArr: PostFormFields[] = [
         fieldType: FieldTypes.select,
     },
     {
-        id: randomUuid,
+        id: uuid(),
         label: FORM_LABELS.PHONE_NUMBER,
         type: InputTypes.tel,
         name: PostFormNameEnum.phoneNumber,
         placeholder: PLACE_HOLDER.ENTER_PHONE_NUMBER,
         errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
-        // pattern: PATTERNS.PHONE_NUMBER,
         required: true,
         fieldType: FieldTypes.input,
     },
     {
-        id: randomUuid,
-        label: FORM_LABELS.UPLOAD_FORM,
+        id: uuid(),
+        label: FORM_LABELS.UPLOAD_FILE,
         type: InputTypes.file,
-        name: PostFormNameEnum.photo,
-        placeholder: PLACE_HOLDER.UPLOAD_PHOTO,
+        name: PostFormNameEnum.fileURL,
+        placeholder: PLACE_HOLDER.UPLOAD_FILE,
         errorMessages: VALIDATION_MESSAGES.REQUIRED_FIELD,
-        required: true,
+        // required: true,
         fieldType: FieldTypes.input,
     },
 ];

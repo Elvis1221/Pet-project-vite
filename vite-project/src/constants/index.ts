@@ -1,7 +1,3 @@
-import uuid from 'react-uuid';
-
-export const randomUuid = uuid();
-
 export const PATTERNS = {
     PASSWORD: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
     EMAIL: /[a-z0-9]+@[a-z0-9.-]+.[a-z]{2,}$/,
@@ -22,7 +18,7 @@ export const FORM_LABELS = {
     GENDER: 'Gender:',
     EMAIL: 'Email:',
     PHONE_NUMBER: 'Phone number:',
-    UPLOAD_FORM: 'Upload photo:',
+    UPLOAD_FILE: 'Upload file:',
     DATA_ATTENDANCE: 'Data attendance:',
     PASSWORD: 'Password:',
     REPEAT_PASSWORD: 'Repeat password:',
@@ -38,7 +34,7 @@ export const PLACE_HOLDER = {
     ENTER_NAME: 'Enter name',
     ENTER_LAST_NAME: 'Enter last name',
     CHOSE_GENDER: 'Chose gender...',
-    UPLOAD_PHOTO: 'Upload you photo',
+    UPLOAD_FILE: 'Upload you file',
     ENTER_SURNAME: 'Enter surname',
     ENTER_EMAIL: 'Enter email',
     ENTER_PHONE_NUMBER: 'Enter phone number',

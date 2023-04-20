@@ -1,4 +1,4 @@
-import { FORM_LABELS, PATTERNS, PLACE_HOLDER, VALIDATION_MESSAGES } from '../../constants';
+import { FORM_LABELS, PLACE_HOLDER, VALIDATION_MESSAGES } from '../../constants';
 import { InputTypes } from '../../components/Input/Input';
 
 enum RegistrationFormNameEnum {
