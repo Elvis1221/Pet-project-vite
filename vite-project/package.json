@@ -11,24 +11,30 @@
     "format": "npx eslint ./src --fix"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/react-redux": "^7.1.25",
     "@vitejs/plugin-react": "^3.1.0",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.8",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-uuid": "^2.0.0",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
     "sass": "^1.60.0",
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react-swc": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
+    "@vitejs/plugin-react-swc": "^3.0.0",
     "eslint": "^8.38.0",
     "prettier": "2.8.7",
+    "redux-devtools-extension": "^2.13.9",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
   }

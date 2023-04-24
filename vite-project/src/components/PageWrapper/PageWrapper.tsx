@@ -7,7 +7,7 @@ import css from './PageWrapper.module.css';
 
 interface IChildren {
   children: JSX.Element | JSX.Element[];
-  pageTitle:string
+  pageTitle: string;
 }
 
 const PageWrapper: FC<IChildren> = ({ children, pageTitle }) => {

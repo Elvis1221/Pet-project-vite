@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import PageWrapper from '../../components/PageWrapper/PageWrapper';
@@ -9,9 +9,13 @@ import { BUTTONS_TITLE, PAGE_TITLES } from '../../constants';
 import { postFormFieldsArr, PostFormValues, PostFormValuesWithFile } from './PostFormFieldsArr';
 
 import css from './Posts.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { addPost } from '../../redux/posts.reducer';
 
 const Posts: React.FC = () => {
-  const [posts, setPosts] = useState<PostFormValues[]>([]);
+  const posts = useSelector((state: any) => state.posts.posts);
+
+  const dispatch = useDispatch();
 
   const {
     register,
@@ -31,9 +35,8 @@ const Posts: React.FC = () => {
       fileURL: url,
       ID: data.ID,
     };
-    console.log('reqData', reqData);
 
-    setPosts([...posts, reqData]);
+    dispatch(addPost(reqData));
 
     reset();
   };
