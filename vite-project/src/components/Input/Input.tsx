@@ -8,11 +8,11 @@ import css from './Input.module.css';
 
 interface IFormFieldsArr {
   label: string;
-  type: string;
   htmlFor: string;
   id: string;
   value: string;
   placeholder?: string;
+  type?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   required?: boolean;

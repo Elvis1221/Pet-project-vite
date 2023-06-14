@@ -3,6 +3,7 @@ import PageWrapper from '../../components/PageWrapper/PageWrapper';
 import { PAGE_TITLES } from '../../constants';
 
 const AboutMe: React.FC = () => {
+
   return (
     <PageWrapper pageTitle={PAGE_TITLES.ABOUT_ME}>
       <div>
