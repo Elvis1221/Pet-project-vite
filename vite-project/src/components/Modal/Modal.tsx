@@ -10,7 +10,7 @@ interface IModalProps {
 
 const Modal: FC<IModalProps> = ({ display = false, onClose, children }) => {
   const closeModalByKey = useCallback(
-    (event: any) => {
+    (event: KeyboardEvent) => {
       if (event.key === 'Escape' && display) {
         onClose();
       }

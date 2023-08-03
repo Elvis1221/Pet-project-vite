@@ -50,7 +50,6 @@ const RegistrationForm: React.FC = () => {
           </div>
         ))}
         <Button
-          disabled={!isValid}
           children={BUTTONS_TITLE.SUBMIT}
           type={ButtonsType.submit}
           className={css.Button}

@@ -16,8 +16,8 @@ const InfoModal: FC<IModalRelocationForm> = ({ onCloseModal, isDisplay }) => (
   <Modal onClose={onCloseModal} display={isDisplay}>
     <div className={css.WrapperModalItems}>
       <div className={css.WrapperHeader}>
-        {/*<Info className={css.InfoSVG} />*/}
-        {/*<Cross className={css.Cross} onClick={onCloseModal} />*/}
+        <Info className={css.InfoSVG} />
+        <Cross className={css.Cross} onClick={onCloseModal} />
       </div>
       <div className={css.InformTextModal}>
         <span>test</span>
