@@ -27,8 +27,6 @@ const Posts: React.FC = () => {
   const onSubmit: SubmitHandler<PostFormValuesWithFile> = data => {
     const url: string = URL.createObjectURL(data.fileURL[0]);
 
-    console.log("url", url);
-
     const reqData: PostFormValues = {
       firstName: data.firstName,
       lastName: data.lastName,

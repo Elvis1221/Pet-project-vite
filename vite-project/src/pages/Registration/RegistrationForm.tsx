@@ -10,7 +10,7 @@ import {
   registrationFormFieldsArr,
   RegistrationFormValues,
 } from './registrationFormFieldsArr';
-import { BUTTONS_TITLE, PAGE_TITLES, PATTERNS } from '../../constants';
+import { BUTTONS_TITLE, PAGE_TITLES } from '../../constants';
 
 import css from './RegistrationForm.module.css';
 
@@ -20,7 +20,7 @@ const RegistrationForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<RegistrationFormValues>();
 
   const navigateHome = () => {
